@@ -1,0 +1,129 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #ffffff;
+    text-align: center;
+
+}
+
+header {
+    padding: 60px 0; /* Increased padding for better spacing */
+    background-color: rgba(0, 0, 0, 0.85); /* Slight dark overlay for the header */
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif; /* Stylish font for heading */
+    font-size: 4rem; /* Increased font size */
+    color: #00c9ff;
+    letter-spacing: 3px; /* More spacing between letters */
+    font-weight: 700; /* Bold font weight */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Add subtle shadow for extra emphasis */
+}
+
+header p {
+    font-family: 'Roboto', sans-serif; /* Keep Roboto for paragraph */
+    font-size: 1.4rem; /* Slightly larger text */
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+.controls {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #00c9ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: #009ecf;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.7); /* Light glow when focused */
+}
+
+button:active {
+    transform: scale(0.95); /* Slight shrink when clicked */
+}
+
+
+#array-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#array-container div {
+    background-color: #00c9ff;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    opacity: 0;  /* Start with opacity 0 */
+}
+
+#array-container div.visible {
+    opacity: 1;  /* Show balloons with a fade-in animation */
+}
+
+#result-container {
+    margin-top: 40px;
+}
+
+#max-coins {
+    font-size: 2rem;
+    color: #ffd700; /* Gold color for the max coins */
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+    transform: scale(1); /* Initial scale for animation */
+}
+
+#max-coins.bounce {
+    animation: bounce 1s ease-out; /* Bounce animation on result */
+}
+#result-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.2); }
+    50% { transform: scale(0.9); }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
